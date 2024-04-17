@@ -15,7 +15,7 @@
     gap: 100px;
     height: 15vh;
     margin-top: 20px;
-    background-color: rgb(6, 35, 49);
+    background-color: rgb(37, 20, 13);
     font-size: large;
     font-family: "Georgia" italic;
     font-weight: bolder;
@@ -53,7 +53,7 @@ body {
 }
 
 footer {
-    background-color: black;
+    background-color: rgb(14, 13, 13);
     color: white;
 }
 
