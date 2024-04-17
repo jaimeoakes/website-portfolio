@@ -37,10 +37,10 @@ a:active {
 }
 
 body {
-    background-image: url("https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010144.jpg?w=1380&t=st=1713293568~exp=1713294168~hmac=45631fcfb1ec7dec267cca586b9f5c844dbe24fa6fd5fa4615e1d3b261ca1d6a");
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg");
     background-size: cover;
-    /* background-position: center; */
-    /* background-repeat: no-repeat;  */
+    background-position: center;
+    background-repeat: no-repeat; 
 }
 
 .text1 {
