@@ -1,0 +1,70 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    height: 20vh; /* Alinha horizontalmente */
+    margin-top: 30px; /* Tamanho do logo ao inves de "width" */
+    /* padding-top: 50px; */
+    /* align-items: center;      Alinha verticalmente */
+    /* height: 100vh;            Torna o elemento do tamanho total da viewport */
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 15vh;
+    margin-top: 20px;
+    background-color: rgb(6, 35, 49);
+    font-size: large;
+    font-family: "Georgia" italic;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+a {
+    color: rgb(209, 209, 176); /* Escolha qualquer cor que você preferir */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilos adicionais para estados de hover e active do link */
+a:hover {
+    color: rgb(25, 208, 46); /* Cor quando o mouse passa sobre o link */
+}
+
+a:active {
+    color: green; /* Cor quando o link é clicado */
+}
+
+body {
+    background-image: url("https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010144.jpg?w=1380&t=st=1713293568~exp=1713294168~hmac=45631fcfb1ec7dec267cca586b9f5c844dbe24fa6fd5fa4615e1d3b261ca1d6a");
+    background-size: cover;
+    /* background-position: center; */
+    /* background-repeat: no-repeat;  */
+}
+
+.text1 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    /* margin: 150px; */
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+.all-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
