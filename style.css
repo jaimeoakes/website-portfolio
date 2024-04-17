@@ -79,11 +79,11 @@ footer {
 }
 
 
-@media all and (max-width: 599px) {
+@media (max-width: 599px) {
     body {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        /* width: 800px; */
     }
 
     h1,
