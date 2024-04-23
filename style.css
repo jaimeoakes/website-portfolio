@@ -94,8 +94,16 @@ footer {
         margin-top: 2vh;
     }
 
-    h1,
     h2 {
-        color: rgb(110, 167, 214);
+        color: rgb(226, 223, 158);
+    }
+
+    h1 {
+        color: rgb(226, 223, 158);
+        text-align: center;
+    }
+
+    .links-container {
+        text-align: center;
     }
 }
