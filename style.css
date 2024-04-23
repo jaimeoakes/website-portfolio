@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 5vh;
     height: 15vh;
     margin-top: 20px;
     background-color: rgb(6, 35, 49);
@@ -62,8 +62,8 @@ body {
 footer {
     background-color: rgb(14, 13, 13);
     color: white;
-    margin: -8px;
-    margin-top: 24vh;
+    margin: -8px; 
+    margin-top: 25vh;
 }
 
 .all-logos {
@@ -83,11 +83,19 @@ footer {
     body {
         display: grid;
         grid-template-columns: 1fr;
-        /* width: 800px; */
+        
+    }
+
+    footer {
+        margin-top: 0vh;
+    }
+
+    .text1 {
+        margin-top: 2vh;
     }
 
     h1,
     h2 {
-        color: blue;
+        color: rgb(110, 167, 214);
     }
 }
