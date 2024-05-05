@@ -1,0 +1,42 @@
+form {
+    display: flex;
+    flex-direction: column;
+    font: Georgia, "Times New Roman", Times, serif;
+    background-color: beige;
+    border: 2px solid #c2c08a;
+    max-width: 500px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 10px 10px;
+    border-bottom: 2px solid black;
+    
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#button {
+    color:black;
+    font-size: medium;
+    font-family: "Roboto Bold";
+    font-weight: bold;
+    background-color: rgb(114, 238, 114);
+}
+
+textarea {
+    height: 200px;
+}
+
+body {
+    background-color: rgb(43, 190, 209);
+}

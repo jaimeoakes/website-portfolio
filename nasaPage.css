@@ -1,0 +1,68 @@
+.box {
+    font-family: 'arial';
+    width: 300px;
+    padding: 10px;
+    border: 3px solid rgb(191, 208, 229);
+    text-align: center;
+}
+
+
+.flex-container {
+    display: flex;
+    width: 850px;
+    height: 324px;
+    background-color: rgb(191, 208, 229);
+    margin: 20px;
+    margin-top: 10px;
+}
+
+img {
+    padding-top: 50px;
+    margin: 20px;
+}
+
+.centered-text {
+    position: absolute;
+    bottom: 60%;
+    right: 67%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#a1 {
+    background-color: aliceblue;
+    height: 20px;
+    width: 200px;
+
+}
+
+#a2 {
+    background-color: aliceblue;
+    height: 100px;
+    width: 200px;
+    outline: black solid 1px;
+
+}
+
+.centered-text {
+    font-family: 'anton', sans-serif;
+}
+
+label {
+    text-align: left;
+    display: flex;
+    width: 200px;
+}
+
+form {
+    width: 200px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
