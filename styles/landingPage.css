@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garantir que a página ocupa toda a altura */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+}
+
+/* Estilizando a logo */
+.logo-container {
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.logo-container img {
+    pointer-events: auto;
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+}
+
+/* Cabeçalho e texto */
+h1, h2 {
+    color: rgb(241, 241, 231);
+    text-align: center;
+    padding-top: 3vh;
+    font-size: 40px;
+}
+
+p {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 20px;
+}
+
+/* Links */
+.links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(6, 35, 49);
+    gap: 15vh;
+    height: 13vh;
+    margin-top: 40px;
+}
+
+a {
+    color: rgb(239, 244, 198);
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: "Georgia";
+    font-size: 25px;
+}
+
+a:hover {
+    color: rgb(25, 208, 46);
+}
+
+a:active {
+    color: green;
+}
+
+/* Background */
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Logos no grid */
+.all-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+/* Footer no final */
+footer {
+    background-color: rgba(6, 35, 49, 0.9);
+    color: rgb(225, 239, 234);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Empurra o footer para o final */
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 599px) {
+    body {
+        display: flex; /* Já é flexbox, então mantém o comportamento */
+    }
+
+    .links-container {
+        flex-direction: column; /* Links empilhados */
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    a {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+    }
+}
