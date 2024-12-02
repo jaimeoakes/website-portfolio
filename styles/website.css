@@ -102,20 +102,33 @@ footer {
     width: 100%;
 }
 
-/* Responsividade */
 @media (max-width: 599px) {
-    body {
-        display: flex; /* Já é flexbox, então mantém o comportamento */
-    }
-
     .links-container {
-        flex-direction: column; /* Links empilhados */
-        height: auto;
-        gap: 10px;
-        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(6, 35, 49);
+        gap: 80px; /* Espaçamento entre os botões */
+        padding: 30px;
     }
 
     a {
         font-size: 20px; /* Ajusta o tamanho da fonte */
+        text-align: center; /* Centraliza o texto no botão */
+    }
+
+    a:hover {
+        background-color: rgb(25, 208, 46); /* Fundo mais claro ao passar o mouse */
+        color: black;
     }
 }
+
+@media (max-width: 599px) {
+    footer {
+        background-color: rgba(6, 35, 49, 0.9); /* Cor de fundo */
+        color: rgb(225, 239, 234); /* Cor do texto */
+    }
+}
+
+
+
