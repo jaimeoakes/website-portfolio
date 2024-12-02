@@ -22,34 +22,36 @@ html, body {
 
 .logo-container img {
     pointer-events: auto;
-    cursor: pointer;
-    width: 200px;
-    height: auto;
+    max-width: 80%; /* Limita a largura máxima em telas pequenas */
+    height: auto; /* Mantém a proporção */
+    margin: 0 auto; /* Centraliza a logo */
+    display: block;
 }
 
 /* Cabeçalho e texto */
 h1, h2 {
     color: rgb(241, 241, 231);
     text-align: center;
-    padding-top: 3vh;
-    font-size: 40px;
+    padding-top: 50px;
+    font-size: 30px; /* Texto menor para títulos */
 }
 
-p {
-    font-size: 15px;
-    text-align: center;
-    margin: 10px 20px;
-}
 
 /* Links */
 .links-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Permite que os links se reorganizem em linhas */
+    justify-content: center; /* Centraliza os links */
+    align-items: center; /* Alinha os links verticalmente */
     background-color: rgb(6, 35, 49);
-    gap: 15vh;
-    height: 13vh;
-    margin-top: 40px;
+    text-align: center;
+}
+
+.links-container a {
+    font-size: 16px; /* Reduz o tamanho da fonte para caber em dispositivos menores */
+    padding: 5px 10px; /* Reduz o padding */
+    text-align: center;
+    display: block; /* Garante que cada link ocupe sua própria linha em telas pequenas */
 }
 
 a {
@@ -79,11 +81,13 @@ body {
 
 /* Logos no grid */
 .all-logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
     text-align: center;
+    gap: 100px; /* Reduz o espaçamento */
+    padding: 40px;
 }
 
 .logo {
@@ -102,7 +106,6 @@ footer {
     width: 100%;
 }
 
-/* Estilos para dispositivos até 599px (já configurado por você) */
 /* Estilos para dispositivos muito pequenos (abaixo de 320px) */
 @media (max-width: 319px) {
     .links-container {
@@ -114,35 +117,32 @@ footer {
     }
 
     a {
-        font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+        font-size: 14px; /* Reduz o tamanho da fonte para telas muito pequenas */
         text-align: center;
-        padding: 8px; /* Padding menor para links */
+        padding: 6px;
     }
 
     .logo-container img {
-        width: 150px; /* Reduz o tamanho da logo */
+        width: 120px; /* Reduz o tamanho da logo */
     }
 }
 
 /* Estilos para dispositivos pequenos (320px até 599px) */
-@media (min-width: 320px) and (max-width: 599px) {
+
+
+/* Estilos específicos para iPhone 14 Pro Max (modo retrato, largura 430px) */
+@media (min-width: 430px) and (max-width: 599px) {
     .links-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(6, 35, 49);
-        gap: 80px; /* Espaçamento entre os botões */
-        padding: 30px;
+        gap: 50px;
+        padding: 25px;
     }
 
     a {
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-        text-align: center;
-    }
-
-    a:hover {
-        background-color: rgb(25, 208, 46);
-        color: black;
+        font-size: 20px; /* Fonte ajustada para maior legibilidade */
+        padding: 10px;
     }
 
     .logo-container img {
@@ -150,7 +150,7 @@ footer {
     }
 }
 
-/* Estilos para dispositivos entre 600px e 768px */
+/* Estilos para dispositivos médios (600px até 768px) */
 @media (min-width: 600px) and (max-width: 768px) {
     .links-container {
         display: flex;
@@ -160,16 +160,16 @@ footer {
     }
 
     a {
-        font-size: 22px;
+        font-size: 22px; /* Fonte levemente maior */
         padding: 10px;
     }
 
     .logo-container img {
-        width: 200px; /* Tamanho padrão da logo */
+        width: 200px; /* Ajusta o tamanho da logo */
     }
 }
 
-/* Estilos para dispositivos entre 769px e 800px */
+/* Estilos para dispositivos médios/grandes (769px até 800px) */
 @media (min-width: 769px) and (max-width: 800px) {
     .links-container {
         display: flex;
@@ -179,95 +179,56 @@ footer {
     }
 
     a {
-        font-size: 24px;
+        font-size: 24px; /* Fonte maior para tablets maiores */
         padding: 12px;
     }
 
     .logo-container img {
-        width: 220px; /* Ajusta para telas ligeiramente maiores */
+        width: 220px; /* Ajusta o tamanho da logo */
     }
 }
 
-/* Estilos para dispositivos maiores que 800px */
-@media (min-width: 801px) {
-    .links-container {
-        display: flex;
-        justify-content: space-around;
-        gap: 50px;
-        padding: 20px;
-    }
-
-    a {
-        font-size: 25px;
-        padding: 12px;
-    }
-
-    .logo-container img {
-        width: 250px; /* Logo maior para desktops */
-    }
-}
-@media (max-width: 599px) {
-    .links-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(6, 35, 49);
-        gap: 80px; /* Espaçamento entre os botões */
-        padding: 30px;
-    }
-
-    a {
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-        text-align: center; /* Centraliza o texto no botão */
-    }
-
-    a:hover {
-        background-color: rgb(25, 208, 46); /* Fundo mais claro ao passar o mouse */
-        color: black;
-    }
-}
-
-/* Estilos para dispositivos entre 600px e 768px */
-@media (min-width: 600px) and (max-width: 768px) {
-    .links-container {
-        display: flex;
-        flex-wrap: wrap; /* Permite que os links se organizem em várias linhas, se necessário */
-        gap: 40px; /* Espaçamento para dispositivos médios */
-        padding: 20px;
-    }
-
-    a {
-        font-size: 22px; /* Aumenta um pouco o tamanho da fonte */
-        padding: 10px; /* Adiciona padding aos links */
-    }
-}
-
-/* Estilos para dispositivos entre 769px e 800px */
-@media (min-width: 769px) and (max-width: 800px) {
-    .links-container {
-        display: flex;
-        justify-content: space-evenly; /* Distribui os links de forma mais uniforme */
-        gap: 30px; /* Reduz um pouco o espaçamento */
-        padding: 15px;
-    }
-
-    a {
-        font-size: 24px; /* Tamanho intermediário de fonte */
-        padding: 12px; /* Ajusta o padding */
-    }
-}
-
-/* Estilos para dispositivos maiores que 800px */
+/* Estilos para dispositivos grandes (acima de 800px) */
 @media (min-width: 801px) {
     .links-container {
         display: flex;
         justify-content: space-around; /* Distribui os links uniformemente */
-        gap: 50px; /* Espaçamento maior */
+        gap: 50px; /* Espaçamento maior para telas grandes */
         padding: 20px;
     }
 
     a {
-        font-size: 25px; /* Fonte padrão maior para desktops */
-        padding: 12px; /* Ajusta o padding */
+        font-size: 25px; /* Fonte maior para desktops */
+        padding: 12px;
+    }
+
+    .logo-container img {
+        width: 250px; /* Logo maior para telas grandes */
+    }
+}
+
+@media (max-width: 320px) {
+    .logo-container img {
+        max-width: 70%; /* Ajusta a logo para telas pequenas */
+    }
+
+    .links-container a {
+        font-size: 14px; /* Fonte ainda menor para links */
+    }
+
+    h1 {
+        font-size: 20px; /* Reduz o título */
+    }
+
+    h2 {
+        font-size: 16px; /* Ajusta o subtítulo */
+    }
+
+    p {
+        font-size: 12px; /* Texto menor para descrições */
+    }
+
+    .logo {
+        width: 40px; /* Ícones menores no rodapé */
     }
 }
