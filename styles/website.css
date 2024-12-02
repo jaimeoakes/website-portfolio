@@ -102,6 +102,110 @@ footer {
     width: 100%;
 }
 
+/* Estilos para dispositivos até 599px (já configurado por você) */
+/* Estilos para dispositivos muito pequenos (abaixo de 320px) */
+@media (max-width: 319px) {
+    .links-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    a {
+        font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+        text-align: center;
+        padding: 8px; /* Padding menor para links */
+    }
+
+    .logo-container img {
+        width: 150px; /* Reduz o tamanho da logo */
+    }
+}
+
+/* Estilos para dispositivos pequenos (320px até 599px) */
+@media (min-width: 320px) and (max-width: 599px) {
+    .links-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(6, 35, 49);
+        gap: 80px; /* Espaçamento entre os botões */
+        padding: 30px;
+    }
+
+    a {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+        text-align: center;
+    }
+
+    a:hover {
+        background-color: rgb(25, 208, 46);
+        color: black;
+    }
+
+    .logo-container img {
+        width: 180px; /* Ajusta o tamanho da logo */
+    }
+}
+
+/* Estilos para dispositivos entre 600px e 768px */
+@media (min-width: 600px) and (max-width: 768px) {
+    .links-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    a {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .logo-container img {
+        width: 200px; /* Tamanho padrão da logo */
+    }
+}
+
+/* Estilos para dispositivos entre 769px e 800px */
+@media (min-width: 769px) and (max-width: 800px) {
+    .links-container {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    a {
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .logo-container img {
+        width: 220px; /* Ajusta para telas ligeiramente maiores */
+    }
+}
+
+/* Estilos para dispositivos maiores que 800px */
+@media (min-width: 801px) {
+    .links-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    a {
+        font-size: 25px;
+        padding: 12px;
+    }
+
+    .logo-container img {
+        width: 250px; /* Logo maior para desktops */
+    }
+}
 @media (max-width: 599px) {
     .links-container {
         display: flex;
@@ -123,12 +227,47 @@ footer {
     }
 }
 
-@media (max-width: 599px) {
-    footer {
-        background-color: rgba(6, 35, 49, 0.9); /* Cor de fundo */
-        color: rgb(225, 239, 234); /* Cor do texto */
+/* Estilos para dispositivos entre 600px e 768px */
+@media (min-width: 600px) and (max-width: 768px) {
+    .links-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os links se organizem em várias linhas, se necessário */
+        gap: 40px; /* Espaçamento para dispositivos médios */
+        padding: 20px;
+    }
+
+    a {
+        font-size: 22px; /* Aumenta um pouco o tamanho da fonte */
+        padding: 10px; /* Adiciona padding aos links */
     }
 }
 
+/* Estilos para dispositivos entre 769px e 800px */
+@media (min-width: 769px) and (max-width: 800px) {
+    .links-container {
+        display: flex;
+        justify-content: space-evenly; /* Distribui os links de forma mais uniforme */
+        gap: 30px; /* Reduz um pouco o espaçamento */
+        padding: 15px;
+    }
 
+    a {
+        font-size: 24px; /* Tamanho intermediário de fonte */
+        padding: 12px; /* Ajusta o padding */
+    }
+}
 
+/* Estilos para dispositivos maiores que 800px */
+@media (min-width: 801px) {
+    .links-container {
+        display: flex;
+        justify-content: space-around; /* Distribui os links uniformemente */
+        gap: 50px; /* Espaçamento maior */
+        padding: 20px;
+    }
+
+    a {
+        font-size: 25px; /* Fonte padrão maior para desktops */
+        padding: 12px; /* Ajusta o padding */
+    }
+}
