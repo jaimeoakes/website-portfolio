@@ -1,0 +1,86 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #a1c5c5; /* Um tom de azul claro */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.todo-container {
+  width: 500px; /* Aumentado de 400px para 500px */
+  padding: 20px;
+  background-color: rgb(130, 165, 158);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header */
+p {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grid Layouts */
+.todo-input-grid,
+.todo-grid {
+  display: grid;
+  grid-template-columns: 200px 150px auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+/* Inputs */
+.name-input,
+.due-date-input {
+  font-size: 15px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.name-input:focus,
+.due-date-input:focus {
+  outline: 2px solid #007bff;
+  border: none;
+}
+
+/* Buttons */
+.add-todo-button,
+.delete-todo-button {
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.add-todo-button {
+  background-color: green;
+}
+
+.add-todo-button:hover {
+  background-color: darkgreen;
+}
+
+.delete-todo-button {
+  background-color: darkred;
+}
+
+.delete-todo-button:hover {
+  background-color: red;
+}
+
+/* Todo Items */
+.todo-grid > div {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

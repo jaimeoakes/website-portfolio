@@ -1,17 +1,20 @@
+body {
+    background-color: rgb(0, 7, 13);
+}
+
 .box {
     font-family: 'arial';
     width: 300px;
     padding: 10px;
-    border: 3px solid rgb(191, 208, 229);
+    border: 3px solid rgb(112, 147, 189);
     text-align: center;
 }
-
 
 .flex-container {
     display: flex;
     width: 850px;
     height: 324px;
-    background-color: rgb(191, 208, 229);
+    background-color: rgb(100, 135, 178);
     margin: 20px;
     margin-top: 10px;
 }
@@ -23,13 +26,22 @@ img {
 
 .centered-text {
     position: absolute;
-    bottom: 60%;
-    right: 67%;
-    transform: translate(-50%, -50%);
-    color: white;
+    top: 30%; /* Move para o meio vertical da imagem */
+    left: 50%; /* Move para o meio horizontal da imagem */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    color: white; /* Mantém o texto visível */
     font-size: 70px;
     font-weight: bold;
+    font-family: 'anton', sans-serif;
 }
+
+
+.container {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: fit-content; /* Ajusta a largura automaticamente ao conteúdo */
+    text-align: left; /* Garante que o alinhamento do texto permaneça à esquerda */
+}
+
 
 #a1 {
     background-color: aliceblue;
@@ -64,5 +76,27 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
+footer {
+    padding: 5px; /* Espaçamento interno */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+}
+
+footer a {
+    color: #a9c14a; /* Cor do link (amarelo, por exemplo) */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+footer a:hover {
+    color: #ffffff; 
+    text-decoration: underline; 
+}
+
+footer p {
+    margin: 10px 0; /* Espaçamento entre os parágrafos */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
