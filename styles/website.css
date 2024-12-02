@@ -48,11 +48,11 @@ h1, h2 {
 }
 
 .links-container a {
-    font-size: 16px; /* Reduz o tamanho da fonte para caber em dispositivos menores */
-    padding: 5px 10px; /* Reduz o padding */
-    text-align: center;
-    display: block; /* Garante que cada link ocupe sua própria linha em telas pequenas */
-}
+        font-size: 20px; /* Aumenta o tamanho do texto */
+        text-align: center; /* Mantém os links centralizados */
+        display: inline-block; /* Garante alinhamento adequado */
+    }
+
 
 a {
     color: rgb(239, 244, 198);
