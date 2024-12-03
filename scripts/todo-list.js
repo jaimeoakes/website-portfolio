@@ -1,21 +1,18 @@
 // Array inicial de tarefas
-const todoList = [
-  {
-    name: 'make dinner',
-    dueDate: '2024-12-22'
-  },
-  {
-    name: 'wash dishes',
-    dueDate: '2024-12-22'
-  },
-  {
-    name: 'Walk the dogs',
-    dueDate: '2024-12-22'
-  },
-  {
-    name: 'take a shower',
-    dueDate: '2024-12-22'
-  }
+
+const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
+      name: 'make dinner',
+      dueDate: '2024-12-22'
+  },  {
+      name: 'wash dishes',
+      dueDate: '2024-12-22'
+  },  {
+      name: 'Walk the dogs',
+      dueDate: '2024-12-22'
+  },  {
+      name: 'take a shower',
+      dueDate: '2024-12-22'
+    }
 ];
 
 // Renderiza a lista de tarefas na tela
@@ -25,7 +22,9 @@ function renderTodoList() {
   let todoListHTML = '';
 
   for (let i = 0; i < todoList.length; i++) {
-    const { name, dueDate } = todoList[i];
+//     const name = todoList[i].name;
+//     const dueDate = todoList[i].dueDate;
+    const { name, dueDate } = todoList[i]; // destructuring
     const html = `
       <div>${name}</div> 
       <div>${dueDate}</div>
@@ -60,4 +59,10 @@ function addTodo() {
   dateInputElement.value = ''; // Limpa o campo de data
 
   renderTodoList(); // Re-renderiza a lista de tarefas
+
+  saveToStorage();
+}
+
+function saveToStorage() {
+  localStorage.setItem('todoList', JSON.stringify(todoList));
 }
