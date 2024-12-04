@@ -100,3 +100,10 @@ footer p {
     font-size: 14px; /* Tamanho da fonte */
 }
 
+@media (max-width: 430px) and (min-height: 932px) {
+    .centered-text {
+        font-size: 50px; 
+        left: 100%; /* Centraliza horizontalmente */
+    }
+}
+
