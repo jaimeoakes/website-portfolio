@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: rgb(228, 228, 194);
+  font-family: Arial;
+  display: flex; /* Permite centralização usando flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+  margin: 0; /* Remove margens padrão */
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.move-icon {
+  height: 50px;
+}
+
+.move-button {
+  background-color: transparent;
+  /* border: 1px solid white; */
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.score {
+  margin-top: 60px;
+}
+
+.reset-score-button,
+.auto-play-button {
+  background-color: rgb(129, 155, 122);
+  font-size: 20px;
+  padding: 2px 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
