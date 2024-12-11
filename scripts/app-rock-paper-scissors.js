@@ -21,7 +21,29 @@ function autoPlay() {
     clearInterval(intervalId); // Para o intervalo
     isAutoPlaying = false; // Muda o estado para desligado
   }
-};
+}
+
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+  playGame('rock');
+});
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+  playGame('paper');
+});
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+  playGame('scissors');
+});
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'r') {
+    playGame('rock');
+  } else if (event.key === 'p') {
+    playGame('paper');
+  } else if (event.key === 's') {
+    playGame('scissors')
+  }
+});
 
 // Função principal do jogo
 function playGame(playerMove) {
@@ -67,7 +89,7 @@ document.querySelector('.js-moves').innerHTML = `
   <img src="images-rps/${computerMove}-emoji copy.png" class="move-icon">
   Computer
   `;
-};
+}
 
 // Atualiza o placar na tela
 function updateScoreElement() {
@@ -81,12 +103,12 @@ function updateScoreElement() {
 // Salva o placar no localStorage
 function localSetStorage(){
   localStorage.setItem('score', JSON.stringify(score)); // chaves no localStorage são sempre strings;
-};
+}
 
 // Recupera o placar do localStorage
 function localGetStorage(){
   return JSON.parse(localStorage.getItem('score'));
-};
+}
 
 // Gera uma jogada aleatória para o computador
 function pickComputerMove() {
@@ -98,4 +120,4 @@ function pickComputerMove() {
   } else {
     return 'scissors';
   }
-};
+}

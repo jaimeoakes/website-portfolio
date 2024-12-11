@@ -1,67 +1,68 @@
-// Array inicial de tarefas
-
-const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
-      name: 'make dinner',
-      dueDate: '2024-12-22'
-  },  {
-      name: 'wash dishes',
-      dueDate: '2024-12-22'
-  },  {
-      name: 'Walk the dogs',
-      dueDate: '2024-12-22'
-  },  {
-      name: 'take a shower',
-      dueDate: '2024-12-22'
-    }
+// Lista inicial de tarefas
+const defaultTodoList = [
+  { name: "make dinner", dueDate: "2024-12-22" },
+  { name: "wash dishes", dueDate: "2024-12-22" },
+  { name: "walk the dogs", dueDate: "2024-12-22" },
+  { name: "take a shower", dueDate: "2024-12-22" },
 ];
 
-// Renderiza a lista de tarefas na tela
-renderTodoList();
+// Carrega a lista do localStorage ou inicializa com a lista padrão
+let todoList = JSON.parse(localStorage.getItem("todoList"));
 
+if (!todoList || todoList.length === 0) {
+  todoList = defaultTodoList;
+  localStorage.setItem("todoList", JSON.stringify(todoList)); // Salva no localStorage
+}
+
+// Função para renderizar a lista de tarefas
 function renderTodoList() {
-  let todoListHTML = '';
+  let todoListHTML = "";
 
-  todoList.forEach((todoObject, index) => {
-
-    const { name, dueDate } = todoObject;
+  todoList.forEach((todo, index) => {
+    const { name, dueDate } = todo;
     const html = `
-      <div>${name}</div> 
+      <div>${name}</div>
       <div>${dueDate}</div>
       <button onclick="
         todoList.splice(${index}, 1);
+        saveToStorage();
         renderTodoList();
-      " class="delete-todo-button">Delete</button>
+      " class="delete-todo-button js-delete-todo-button">Delete</button>
     `;
     todoListHTML += html;
   });
 
-  document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+  document.querySelector(".js-todo-list").innerHTML = todoListHTML;
 }
 
-// Adiciona uma nova tarefa à lista
+// Função para salvar no localStorage
+function saveToStorage() {
+  localStorage.setItem("todoList", JSON.stringify(todoList));
+}
+
+// Adiciona uma nova tarefa
 function addTodo() {
-  const inputElement = document.querySelector('.js-name-input');
-  const name = inputElement.value;
+  const nameInput = document.querySelector(".js-name-input");
+  const dueDateInput = document.querySelector(".js-due-date-input");
 
-  const dateInputElement = document.querySelector('.js-due-date-input');
-  const dueDate = dateInputElement.value;
+  const name = nameInput.value.trim();
+  const dueDate = dueDateInput.value;
 
-  // Validação para evitar campos vazios
-  if (name === '' || dueDate === '') {
-    alert('Please fill out both fields');
+  if (!name || !dueDate) {
+    alert("Please fill out both fields");
     return;
   }
 
-  todoList.push({ name, dueDate }); // Adiciona a nova tarefa ao array
+  todoList.push({ name, dueDate }); // Adiciona ao array
+  saveToStorage(); // Atualiza no localStorage
+  renderTodoList(); // Re-renderiza a lista
 
-  inputElement.value = ''; // Limpa o campo de entrada de texto
-  dateInputElement.value = ''; // Limpa o campo de data
-
-  renderTodoList(); // Re-renderiza a lista de tarefas
-
-  saveToStorage();
+  nameInput.value = ""; // Limpa o campo de entrada
+  dueDateInput.value = ""; // Limpa o campo de data
 }
 
-function saveToStorage() {
-  localStorage.setItem('todoList', JSON.stringify(todoList));
-}
+// Inicializa a lista ao carregar a página
+renderTodoList();
+
+// Adiciona evento ao botão "Add"
+document.querySelector(".js-add-todo-button").addEventListener("click", addTodo);
