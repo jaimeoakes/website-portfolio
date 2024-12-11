@@ -13,7 +13,7 @@ updateScoreElement(); // Atualiza o placar na tela
 // Função para ativar/desativar o modo automatico
 function autoPlay() {
   if (!isAutoPlaying) { // Se o modo automático está desligado
-    intervalId = setInterval(function () {
+    intervalId = setInterval(() => {
       playGame(); // Chama playGame repetidamente a cada segundo
     }, 1000);
     isAutoPlaying = true; // Muda o estado para ligado
