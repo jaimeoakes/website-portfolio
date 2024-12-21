@@ -21,6 +21,7 @@
 
 /* Garantir que a página ocupa toda a altura */
 html, body {
+    background-color: rgb(6, 35, 49);
     height: 100%;
     display: flex;
     flex-direction: column; /* Organiza os elementos em uma coluna */
